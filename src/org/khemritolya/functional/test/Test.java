@@ -201,6 +201,7 @@ public class Test {
 
         for (int i = 0; i < 100; i++) {
             assertEquals((i+1) * (i+1), nonRecursive.execute(i));
+
         }
 
         RecursiveFunction<Integer, Integer> echo = new RecursiveFunction<>(RecursiveFunction::result);
