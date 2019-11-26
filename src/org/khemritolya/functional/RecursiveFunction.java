@@ -249,7 +249,7 @@ public class RecursiveFunction<A, R> {
                     result = null;
                 } else if (current.joinFunction != null && current.visited == 1) {
                     current.visited = 2;
-                    result = current.joinFunction.join(result, intermediates.pop());
+                    result = current.joinFunction.join(intermediates.pop(), result);
                 } else if (current.joinFunction != null && current.visited > 1)
                     throw new RuntimeException("invalid state: visited");
             }
